@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.ecotask_.ui.Fragments.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_incluirTarefaFragment"
+            app:destination="@id/incluirTarefaFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_fragmentDicas"
+            app:destination="@id/fragmentDicas" />
+    </fragment>
+    <fragment
+        android:id="@+id/incluirTarefaFragment"
+        android:name="com.example.ecotask_.ui.Fragments.incluirTarefaFragment"
+        android:label="fragment_incluir_tarefa"
+        tools:layout="@layout/fragment_incluir_tarefa" >
+        <action
+            android:id="@+id/action_incluirTarefaFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDicas"
+        android:name="com.example.ecotask_.FragmentDicas"
+        android:label="fragment_dicas"
+        tools:layout="@layout/fragment_dicas" >
+        <action
+            android:id="@+id/action_fragmentDicas_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_fragmentDicas_to_fragmentEnergia"
+            app:destination="@id/fragmentEnergia" />
+        <action
+            android:id="@+id/action_fragmentDicas_to_fragmentCompost"
+            app:destination="@id/fragmentCompost" />
+        <action
+            android:id="@+id/action_fragmentDicas_to_fragmentReciclagem"
+            app:destination="@id/fragmentReciclagem" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentReciclagem"
+        android:name="com.example.ecotask_.FragmentReciclagem"
+        android:label="fragment_reciclagem"
+        tools:layout="@layout/fragment_reciclagem" >
+        <action
+            android:id="@+id/action_fragmentReciclagem_to_fragmentDicas"
+            app:destination="@id/fragmentDicas" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCompost"
+        android:name="com.example.ecotask_.FragmentCompost"
+        android:label="fragment_compost"
+        tools:layout="@layout/fragment_compost" >
+        <action
+            android:id="@+id/action_fragmentCompost_to_fragmentDicas"
+            app:destination="@id/fragmentDicas" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEnergia"
+        android:name="com.example.ecotask_.FragmentEnergia"
+        android:label="fragment_energia"
+        tools:layout="@layout/fragment_energia" >
+        <action
+            android:id="@+id/action_fragmentEnergia_to_fragmentDicas"
+            app:destination="@id/fragmentDicas" />
+    </fragment>
+</navigation>
